@@ -6,6 +6,9 @@ import Products from "./pages/Products";
 import CreateProduct from "./pages/CreateProduct";
 import NotFound from "./pages/NotFound";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import "./App.css";
 
 function App() {
@@ -19,6 +22,8 @@ function App() {
         <Route path="/products/create" element={<CreateProduct />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+
+      <ToastContainer position="top-right" autoClose={3000} />
     </BrowserRouter>
   );
 }

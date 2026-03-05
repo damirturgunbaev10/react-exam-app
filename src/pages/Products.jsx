@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import ProductCard from "../components/ProductCard";
+import "../App.css";
+
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -28,7 +30,7 @@ function Products() {
 
   return (
     <div className="products">
-      <h1>Products</h1>
+      <h1 className="products-title">Products</h1>
 
       <div className="products-grid">
         {products.map((product) => (
